@@ -1,0 +1,46 @@
+2024-11-02T19:11:06,654 [main] INFO  (ConfigurationReader.java:19) - Loading the property file...
+2024-11-02T19:11:06,658 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T19:11:06,659 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T19:11:06,659 [main] INFO  (Driver.java:31) - Starting a firefox browser
+2024-11-02T19:11:18,436 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T19:11:18,437 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T19:11:29,785 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T19:11:29,786 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T19:11:34,907 [main] INFO  (Driver.java:73) - Closing the browser
+2024-11-02T19:13:23,062 [main] INFO  (ConfigurationReader.java:19) - Loading the property file...
+2024-11-02T19:13:23,068 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T19:13:23,068 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T19:13:23,068 [main] INFO  (Driver.java:31) - Starting a firefox browser
+2024-11-02T19:13:32,080 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T19:13:32,081 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T19:13:43,255 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T19:13:43,255 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T19:13:48,326 [main] INFO  (Driver.java:73) - Closing the browser
+2024-11-02T19:14:49,254 [main] INFO  (ConfigurationReader.java:19) - Loading the property file...
+2024-11-02T19:14:49,259 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T19:14:49,259 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T19:14:49,259 [main] INFO  (Driver.java:54) - Starting a Chrome browser
+2024-11-02T19:15:00,245 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T19:15:00,245 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T19:15:11,667 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T19:15:11,667 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T19:15:16,794 [main] INFO  (Driver.java:73) - Closing the browser
+2024-11-02T19:24:10,627 [main] INFO  (ConfigurationReader.java:19) - Loading the property file...
+2024-11-02T19:24:10,632 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T19:24:10,632 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T19:24:10,633 [main] INFO  (Driver.java:54) - Starting a Chrome browser
+2024-11-02T19:24:18,081 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T19:24:18,082 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T19:24:29,380 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T19:24:29,381 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T19:24:34,529 [main] INFO  (Driver.java:73) - Closing the browser
+2024-11-02T19:28:54,248 [main] INFO  (Driver.java:73) - Closing the browser
+2024-11-02T19:29:46,716 [main] INFO  (ConfigurationReader.java:19) - Loading the property file...
+2024-11-02T19:29:46,720 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T19:29:46,721 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T19:29:46,721 [main] INFO  (Driver.java:54) - Starting a Chrome browser
+2024-11-02T19:29:54,105 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T19:29:54,106 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T19:30:05,241 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T19:30:05,242 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T19:30:10,372 [main] INFO  (Driver.java:73) - Closing the browser
