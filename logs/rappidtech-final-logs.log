@@ -44,3 +44,25 @@
 2024-11-02T19:30:05,241 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
 2024-11-02T19:30:05,242 [main] INFO  (Driver.java:26) - Getting a driver instance
 2024-11-02T19:30:10,372 [main] INFO  (Driver.java:73) - Closing the browser
+2024-11-02T20:23:10,876 [main] INFO  (ConfigurationReader.java:19) - Loading the property file...
+2024-11-02T20:23:10,882 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T20:23:10,882 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T20:23:10,883 [main] INFO  (Driver.java:54) - Starting a Chrome browser
+2024-11-02T20:23:19,386 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T20:23:19,386 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T20:23:30,483 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T20:23:30,483 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T20:23:35,610 [main] INFO  (Driver.java:73) - Closing the browser
+2024-11-02T20:24:13,563 [main] INFO  (ConfigurationReader.java:19) - Loading the property file...
+2024-11-02T20:24:13,570 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T20:24:13,570 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T20:24:13,570 [main] INFO  (Driver.java:31) - Starting a firefox browser
+2024-11-02T20:24:23,435 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T20:24:23,435 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T20:24:34,565 [main] INFO  (ConfigurationReader.java:57) - Getting the property key {browserType} from the property file
+2024-11-02T20:24:34,565 [main] INFO  (Driver.java:26) - Getting a driver instance
+2024-11-02T20:24:39,655 [main] INFO  (Driver.java:73) - Closing the browser
+2024-11-02T20:53:00,513 [main] INFO  (Driver.java:73) - Closing the browser
+2024-11-02T20:54:37,476 [main] INFO  (Driver.java:73) - Closing the browser
+2024-11-02T20:57:44,229 [main] INFO  (Driver.java:73) - Closing the browser
+2024-11-02T20:59:29,023 [main] INFO  (Driver.java:73) - Closing the browser

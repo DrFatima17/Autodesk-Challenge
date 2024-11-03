@@ -8,10 +8,10 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/resources/features/"},
         glue = {"com.autodesk.stepdefinitions", "com.autodesk.hooks"},
-        plugin = {"pretty", "html:target/RappidTech-report-final.html",
+        plugin = {"pretty", "html:target/Autodesk-report-final.html",
                 "rerun:target/failed_scenarios.txt",
-                "json:target/RappidTech-report.json",
-                "me.jvt.cucumber.report.PrettyReports:target/RappidTech-report",
+                "json:target/Autodesk-report.json",
+                "me.jvt.cucumber.report.PrettyReports:target/Autodesk-report",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         dryRun = false
         //tags= "@smoke"
