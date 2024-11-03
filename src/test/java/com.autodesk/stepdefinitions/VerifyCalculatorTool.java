@@ -8,107 +8,47 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import java.util.List;
 import java.util.Map;
-
 import static org.yaml.snakeyaml.tokens.Token.ID.Value;
 
 public class VerifyCalculatorTool {
-
-    HomePage homePage= new HomePage();
-
+    HomePage homePage = new HomePage();
 
     @Given("user is navigated successfully to Google home page")
-    public void user_is_navigated_successfully_to_google_home_page() {
+    public void user_is_navigated_successfully_to_google_home_page() throws InterruptedException {
         Driver.getDriver().get("https://www.google.com/search?client=firefox-b-d&q=calculator");
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);}
+        Thread.sleep(1000);
     }
 
-//    @And("user clicks on Stay Signed Out button")
-//    public void user_clicks_on_Stay_Signed_Out_button(){
-//        homePage.clickStaySignedOutButton();
-//    }
-//    @And("user clicks on Seach Bar")
-//    public void user_clicks_on_seach_bar() {
-//       homePage.clickOnSearchBar();
-//    }
-//    @When("user types the term {string}")
-//    public void user_types_the_term(String string) {
-//        homePage.addTextToTextBarInHomePage();
-//    }
-//
-//    @And("user clicks on enter button on keyboard")
-//    public void user_clicks_on_enter_button() {
-//        homePage.clickEnterOnKeyboard();
-//    }
-//
-//
-//    @Then("user is able to see the calculator details")
-//    public void user_is_able_to_see_the_product_details() {
-//        Assert.assertTrue(homePage.isNumberZeroDisplayed());
-//        Assert.assertTrue(homePage.isNumberOneDisplayed());
-//        Assert.assertTrue(homePage.isNumberTwoDisplayed());
-//        Assert.assertTrue(homePage.isNumberThreeDisplayed());
-//        Assert.assertTrue(homePage.isNumberFourDisplayed());
-//        Assert.assertTrue(homePage.isNumberFiveDisplayed());
-//        Assert.assertTrue(homePage.isNumberSixDisplayed());
-//        Assert.assertTrue(homePage.isNumberSevenDisplayed());
-//        Assert.assertTrue(homePage.isNumberEightDisplayed());
-//        Assert.assertTrue(homePage.isNumberNineDisplayed());
-//        Assert.assertTrue(homePage.isPlusDisplayed());
-//        Assert.assertTrue(homePage.isMinusDisplayed());
-//        Assert.assertTrue(homePage.isMultiplyDisplayed());
-//        Assert.assertTrue(homePage.isDivideDisplayed());
-//        Assert.assertTrue(homePage.isAllClearDisplayed());
-//    }
-   @Then("button {word} is displayed")
-public void button_is_displayed(Integer int1) {
-       System.out.println(int1);
-       Assert.assertTrue(homePage.isNumberZeroDisplayed());
-        Assert.assertTrue(homePage.isNumberOneDisplayed());
-        Assert.assertTrue(homePage.isNumberTwoDisplayed());
-        Assert.assertTrue(homePage.isNumberThreeDisplayed());
-        Assert.assertTrue(homePage.isNumberFourDisplayed());
-        Assert.assertTrue(homePage.isNumberFiveDisplayed());
-        Assert.assertTrue(homePage.isNumberSixDisplayed());
-        Assert.assertTrue(homePage.isNumberSevenDisplayed());
-        Assert.assertTrue(homePage.isNumberEightDisplayed());
-        Assert.assertTrue(homePage.isNumberNineDisplayed());
+    @Then("user is able to see below calculator details:")
+    public void user_is_able_to_see_below_calculator_details(DataTable dataTable) {
+        List<WebElement> elements = Driver.getDriver().findElements(By.xpath("//table[@class='ElumCf']//td"));
+        /**
+         * Maps will help us to store the data in key value pair
+         * Key will be the column name from the feature file and value will be the value from the feature file
+         * Key is button and isDisplayed
+         */
+        List<Map<String, String>> calculatorDetails = dataTable.asMaps();
 
-}
-@And("button = is displayed")
-public void button_equal_displayed() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("button + is displayed")
-public void button_plus_displayed() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("button - is displayed")
-public void button_minus_displayed() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("button * is displayed")
-public void button_multiply_displayed() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("button \\/ is displayed")
-public void button_divide_displayed() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("button AC is displayed")
-public void button_ac_is_displayed() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
+        /**
+         * We are iterating through the list of maps and getting the button and isDisplayed value
+         * We are verifying the button is displayed or not based on the isDisplayed value
+         * If the element matches the button from the feature file, we are verifying the button is displayed or not
+         */
+        for (int i = 0; i < calculatorDetails.size(); i++) {
+            String button = calculatorDetails.get(i).get("button");
+            boolean isDisplayedFromGherkinTable = Boolean.parseBoolean(calculatorDetails.get(i).get("isDisplayed"));
+            System.out.println("We are verifying the button: " + button + " is displayed: " + isDisplayedFromGherkinTable);
+            for (WebElement element : elements) {
+                //We only verify the button if it is displayed for the ones that are coming from feature file
+                if (element.getText().equals(button)) {
+                    //We are verifying the button is displayed against the column isDisplayed from the feature file
+                    Assert.assertEquals(element.isDisplayed(),isDisplayedFromGherkinTable);
+                }
+            }
+        }
     }
-
+}
